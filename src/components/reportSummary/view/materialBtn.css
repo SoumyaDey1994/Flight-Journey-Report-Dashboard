@@ -1,0 +1,34 @@
+.btn {
+    position: relative;
+    size: 20px;
+    display: block;
+    margin: 30px auto;
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);  
+    background-color: #2ecc71;
+    color: #ecf0f1; 
+    transition: background-color .3s;
+  }
+  
+  .btn:hover, .btn:focus {
+    background-color: #27ae60;
+  }
+  
+  .btn > * {
+    position: relative;
+  }
+
+.btn.Material {
+    padding: auto;
+    height: 25px;
+    width: 100px;
+    background-color: rgb(26, 141, 194);
+  }
+  
+  .btn.Material:hover, .btn.btn.Material:focus {
+    background-color: #377008d8;
+  }

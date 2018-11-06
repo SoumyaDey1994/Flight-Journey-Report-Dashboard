@@ -1,0 +1,23 @@
+.Head {
+    text-align: center;
+}
+  
+  
+.Head-header {
+    background-color: #5c0931;
+    height: 80px;
+    padding-top: 10px;
+    color: white;
+}
+  
+.Head-title {
+    font-size: 1.7em;
+}
+
+.Head-intro {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    font-size: 1.8em;
+    padding-bottom: 10px;  
+}
+  

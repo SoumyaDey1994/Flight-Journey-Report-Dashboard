@@ -1,5 +1,17 @@
+/*
+    Login Credentials :
+        Username : admin
+        Password : admin@qatar
+    In case any modification is needed, 
+    file need to look for;
+        File Name : login.js
+        Directory : components/login
+        FunctionName : validateUser
+        Line Number : 51 & 52
+*/
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'babel-polyfill';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

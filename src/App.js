@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+
+import Home from './components/Home/view/home';
+import Details from './components/Details/view/details';
+import Login from './components/login/login';
+
+global.isLoggedIn = false;  //Initial Logged in flag is false
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+     <HashRouter>
+        <Switch>
+          <Route exact path="/login" name="login" component={Login} />
+          <Route exact path="/home" name="Home" render={() => global.isLoggedIn ? <Home /> : <Redirect to="/login" />} />
+          <Route exact path="/logout" name="logout" render={() => <Redirect to="/login" />} />
+          <Route exact path="/report/:id" name="Details" render={() => global.isLoggedIn ? <Details /> : <Redirect to="/login" />} />
+          <Route path="*" name="any" render = {() => global.isLoggedIn ? <Redirect to="/home"/> : <Redirect to="/login"/>} />
+          />
+        </Switch>
+    </HashRouter>
     );
   }
 }
