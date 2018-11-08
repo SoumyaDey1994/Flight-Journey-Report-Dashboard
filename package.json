@@ -1,7 +1,8 @@
 {
   "name": "voyageadmindashboard",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "authors" : ["Soumya Kanta Dey(24648)", "Sourav Debnath(24652)"],
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "react": "^16.6.0",
